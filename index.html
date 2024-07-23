@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ Page</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <h1 class="title">Frequently Asked Questions</h1>
+      </div>
+      <div class="sub-title">
+        <p class="description">
+          <strong
+            >Products, Website or Brand Design, we’ve got you covered!</strong
+          >
+        </p>
+        <p class="under-description">
+          Give us your questions, and we can help you achieve our goals
+          together!
+        </p>
+      </div>
+
+      <ul class="list">
+        <li class="list-item"><a class="button-item">Overview</a></li>
+        <li class="list-item">
+          <a class="button-item">Design System</a>
+        </li>
+        <li class="list-item">
+          <a class="button-item">Brand Design</a>
+        </li>
+        <li class="list-item">
+          <a class="button-item">Develop Website</a>
+        </li>
+      </ul>
+
+      <div class="accordion-item">
+        <span class="accordion">How does it work?</span>
+        <div class="panel">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
+            ab explicabo cumque.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <span class="accordion">Which platform do you support?</span>
+        <div class="panel">
+          <p>
+            In a situational interview, the interviewer may ask how you overcame
+            a difficult situation and what you learned from it. You can use your
+            response to demonstrate your flexibility and share an example of how
+            you transformed a negative experience into a positive outcome.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <span class="accordion">How do I invite my teammates?</span>
+        <div class="panel">
+          <p>
+            Collect the contact information of your teammates, including their
+            email addresses or usernames on the platform you will use.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <span class="accordion">Do you have annual plan?</span>
+        <div class="panel">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
+            ab explicabo cumque.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <span class="accordion">How to create new workspace?</span>
+        <div class="panel">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
+            ab explicabo cumque.
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <span class="accordion">How do I set roles & permissions?</span>
+        <div class="panel">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
+            ab explicabo cumque.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const classes = {
+      activeClass: 'active',
+    };
+    const lists = document.querySelector('.list');
+    const listItems = lists.querySelectorAll('.list-item');
+
+    listItems.forEach((ele) => {
+      ele.addEventListener('click', function () {
+        const activeItem = lists.querySelector(`.${classes.activeClass}`);
+        if (activeItem) {
+          activeItem.classList.remove(classes.activeClass);
+        }
+        ele.classList.add(classes.activeClass);
+      });
+    });
+
+    var acc = document.getElementsByClassName('accordion-item');
+
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener('click', function () {
+        // Toggle between adding and removing the "active" class
+        this.classList.toggle('active');
+
+        // Toggle between hiding and showing the active panel
+        var panel = this.querySelector('.panel');
+        console.log(panel.style.maxHeight);
+        if (panel.scrollHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    }
+  </script>
+</html>
