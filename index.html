@@ -35,108 +35,108 @@
           <a class="button-item">Develop Website</a>
         </li>
       </ul>
-
-      <div class="accordion-item">
-        <span class="accordion">How does it work?</span>
-        <div class="panel">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
-            ab explicabo cumque.
-          </p>
+      <div class="accordion-list">
+        <div class="accordion-item">
+          <span class="accordion"
+            >How does it work?
+            <a class="arrow-icon">
+              <span class="left-bar"></span>
+              <span class="right-bar"></span>
+            </a>
+          </span>
+          <div class="panel">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+              perspiciatis molestiae veniam dolore libero dolorem nam
+              dignissimos ab explicabo cumque.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <span class="accordion">Which platform do you support?</span>
-        <div class="panel">
-          <p>
-            In a situational interview, the interviewer may ask how you overcame
-            a difficult situation and what you learned from it. You can use your
-            response to demonstrate your flexibility and share an example of how
-            you transformed a negative experience into a positive outcome.
-          </p>
+        <div class="accordion-item">
+          <span class="accordion"
+            >Which platform do you support?
+            <a class="arrow-icon">
+              <span class="left-bar"></span>
+              <span class="right-bar"></span>
+            </a>
+          </span>
+          <div class="panel">
+            <p>
+              In a situational interview, the interviewer may ask how you
+              overcame a difficult situation and what you learned from it. You
+              can use your response to demonstrate your flexibility and share an
+              example of how you transformed a negative experience into a
+              positive outcome.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <span class="accordion">How do I invite my teammates?</span>
-        <div class="panel">
-          <p>
-            Collect the contact information of your teammates, including their
-            email addresses or usernames on the platform you will use.
-          </p>
+        <div class="accordion-item">
+          <span class="accordion"
+            >How to create new workspace
+            <a class="arrow-icon">
+              <span class="left-bar"></span>
+              <span class="right-bar"></span> </a
+          ></span>
+          <div class="panel">
+            <p>
+              Collect the contact information of your teammates, including their
+              email addresses or usernames on the platform you will use.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <span class="accordion">Do you have annual plan?</span>
-        <div class="panel">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
-            ab explicabo cumque.
-          </p>
+        <div class="accordion-item">
+          <span class="accordion"
+            >Do you have annual plan?
+            <a class="arrow-icon">
+              <span class="left-bar"></span>
+              <span class="right-bar"></span> </a
+          ></span>
+          <div class="panel">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+              perspiciatis molestiae veniam dolore libero dolorem nam
+              dignissimos ab explicabo cumque.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <span class="accordion">How to create new workspace?</span>
-        <div class="panel">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
-            ab explicabo cumque.
-          </p>
+        <div class="accordion-item">
+          <span class="accordion"
+            >How to create new workspace?
+            <a class="arrow-icon">
+              <span class="left-bar"></span>
+              <span class="right-bar"></span> </a
+          ></span>
+          <div class="panel">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+              perspiciatis molestiae veniam dolore libero dolorem nam
+              dignissimos ab explicabo cumque.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div class="accordion-item">
-        <span class="accordion">How do I set roles & permissions?</span>
-        <div class="panel">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
-            perspiciatis molestiae veniam dolore libero dolorem nam dignissimos
-            ab explicabo cumque.
-          </p>
+        <div class="accordion-item">
+          <span class="accordion"
+            >How do I set roles & permissions?
+            <a class="arrow-icon">
+              <span class="left-bar"></span>
+              <span class="right-bar"></span> </a
+          ></span>
+          <div class="panel">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+              perspiciatis molestiae veniam dolore libero dolorem nam
+              dignissimos ab explicabo cumque.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </body>
 
-  <script>
-    const classes = {
-      activeClass: 'active',
-    };
-    const lists = document.querySelector('.list');
-    const listItems = lists.querySelectorAll('.list-item');
-
-    listItems.forEach((ele) => {
-      ele.addEventListener('click', function () {
-        const activeItem = lists.querySelector(`.${classes.activeClass}`);
-        if (activeItem) {
-          activeItem.classList.remove(classes.activeClass);
-        }
-        ele.classList.add(classes.activeClass);
-      });
-    });
-
-    var acc = document.getElementsByClassName('accordion-item');
-
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener('click', function () {
-        // Toggle between adding and removing the "active" class
-        this.classList.toggle('active');
-
-        // Toggle between hiding and showing the active panel
-        var panel = this.querySelector('.panel');
-        console.log(panel.style.maxHeight);
-        if (panel.scrollHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
-      });
-    }
-  </script>
+  <script src="./index.js"></script>
 </html>
